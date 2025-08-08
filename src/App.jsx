@@ -1,13 +1,26 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
+import { BrowserRouter } from 'react-router-dom'
+import{About,Contact,Experience,Feedbacks,Hero,Navbar,Tech,Works,StarCanvas} from './components'
 import './index.css'
-import { div } from 'framer-motion/client'
 
 const App=()=>{
   return(
-    <div>
-      3D Developer Portfolio
+  <BrowserRouter>
+  <div className="relative z-0 bg-primary">
+    <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <Navbar/>
+      < Hero />
     </div>
+  <About />
+  <Experience />
+  <Tech />
+  <Works />
+  <Feedbacks />
+    </div>
+    <div className='relative z-0'>
+      <Contact />
+      <StarCanvas />
+    </div>
+  </BrowserRouter>
   )
 }
 export default App
